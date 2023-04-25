@@ -9,5 +9,9 @@ class Person(val firstName: String = "Peter", val lastName: String = "Parker") {
       println("the return value is $field")
       return field
     }
+  fun printInfo() {
+    val nicknameToPrint = nickname ?: "no nickname"
+    println("$firstName ($nickname) $lastName")
+  }
 }
 
