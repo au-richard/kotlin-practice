@@ -21,8 +21,14 @@ fun getGreeting() = "Hello Kotlin"
 fun sayHello(greeting: String, itemToGreet: String) = println("$greeting $itemToGreet")
 
 val interestingThings = listOf("Kotlin", "Programming", "Comic Books")
+
+//Key value pairs
+val map = mapOf(1 to "a", 2 to "b", 3 to "c")
+
+
 fun main() {
     sayHello(greeting = "Hey", itemToGreet = "Kotlin")
     sayHello(greeting = "Hello", itemToGreet = "World")
+    map.forEach { (key, value) -> println("$key -> $value") }
 
 }
