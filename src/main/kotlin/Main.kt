@@ -1,7 +1,28 @@
-val name = "Richard"
-var greeting: String? = null
+//val name = "Richard"
+//var greeting: String? = null
+
+//    greeting = "Hello"
+//    val greetingToPrint = when (greeting) {
+//        null -> "Hi"
+//        else -> greeting
+//    }
+//    return greetingToPrint
+
+//fun getGreeting(): String {
+//    return "Hello Kotlin"
+//}
+
+//Single Expression Function Definition
+fun getGreeting() = "Hello Kotlin"
+
+//Unit in Kotlin = Absence of any useful type
+fun sayHello() {
+    println(getGreeting())
+}
 fun main() {
-    val greetingToPrint = if (greeting != null) greeting else "Hi"
-    println(greetingToPrint)
-    println(name)
+
+//    println(greetingToPrint)
+//    println(name)
+    println(getGreeting())
+    sayHello()
 }
