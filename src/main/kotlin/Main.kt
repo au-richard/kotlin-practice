@@ -36,5 +36,9 @@ fun sayHello(greeting: String, vararg itemsToGreet: String) {
 fun greetPerson(greeting: String = "Hello", name: String = "Kotlin") = println("$greeting $name")
 
 fun main() {
-  greetPerson(name = "nate")
+//  val interestingThings = arrayOf("Kotlin", "Programming", "Comic Books")
+//  sayHello(itemsToGreet = interestingThings, greeting = "Hi")
+  val person = Person(_firstName = "Mike", _lastName = "Johnson")
+  person.lastName
+  person.firstName
 }
