@@ -18,18 +18,22 @@
 fun getGreeting() = "Hello Kotlin"
 
 //Unit in Kotlin = Absence of any useful type
-fun sayHello(greeting: String, itemToGreet: String) = println("$greeting $itemToGreet")
+fun sayHello(greeting: String, itemsToGreet: List<String>) {
+  itemsToGreet.forEach { itemToGreet ->
+    println("$greeting $itemToGreet")
+  }
+}
 
 val interestingThings = listOf("Kotlin", "Programming", "Comic Books")
 
 //Key value pairs
 val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c")
 
+//  sayHello(greeting = "Hey", itemToGreet = "Kotlin")
+//  sayHello(greeting = "Hello", itemToGreet = "World")
+//  map.put(4, "d")
+//  map.forEach { (key, value) -> println("$key -> $value") }
 
 fun main() {
-    sayHello(greeting = "Hey", itemToGreet = "Kotlin")
-    sayHello(greeting = "Hello", itemToGreet = "World")
-    map.forEach { (key, value) -> println("$key -> $value") }
-    map.put(4, "d")
-
+  sayHello(greeting = "Hi", interestingThings)
 }
