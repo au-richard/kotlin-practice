@@ -1,5 +1,7 @@
 //val name = "Richard"
-//var greeting: String? = null
+//var greeting = "Hello"
+//
+//greeting = "Hi"
 
 //    greeting = "Hello"
 //    val greetingToPrint = when (greeting) {
@@ -17,6 +19,8 @@ fun getGreeting() = "Hello Kotlin"
 
 //Unit in Kotlin = Absence of any useful type
 fun sayHello(greeting: String, itemToGreet: String) = println("$greeting $itemToGreet")
+
+val interestingThings = listOf("Kotlin", "Programming", "Comic Books")
 fun main() {
     sayHello(greeting = "Hey", itemToGreet = "Kotlin")
     sayHello(greeting = "Hello", itemToGreet = "World")
