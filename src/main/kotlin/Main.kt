@@ -16,13 +16,9 @@
 fun getGreeting() = "Hello Kotlin"
 
 //Unit in Kotlin = Absence of any useful type
-fun sayHello() {
-    println(getGreeting())
-}
+fun sayHello(greeting: String, itemToGreet: String) = println("$greeting $itemToGreet")
 fun main() {
+    sayHello(greeting = "Hey", itemToGreet = "Kotlin")
+    sayHello(greeting = "Hello", itemToGreet = "World")
 
-//    println(greetingToPrint)
-//    println(name)
-    println(getGreeting())
-    sayHello()
 }
