@@ -38,6 +38,6 @@ fun greetPerson(greeting: String = "Hello", name: String = "Kotlin") = println("
 fun main() {
 //  val interestingThings = arrayOf("Kotlin", "Programming", "Comic Books")
 //  sayHello(itemsToGreet = interestingThings, greeting = "Hi")
-  val person = Person("Mike", "Johnson")
-  person.printInfo()
+//  val person = Person("Mike", "Johnson")
+//  person.printInfo()
 }
