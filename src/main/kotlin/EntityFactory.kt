@@ -1,7 +1,7 @@
 import java.util.*
 
 enum class EntityType {
-  EASY, MEDIUM, HARD;
+  HELP, EASY, MEDIUM, HARD;
 
   fun getFormattedName() = name.lowercase()
     .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
@@ -13,17 +13,27 @@ object EntityFactory {
       EntityType.EASY -> type.name
       EntityType.MEDIUM -> type.getFormattedName()
       EntityType.HARD -> "HARD"
+      EntityType.HELP -> type.getFormattedName()
 
     }
-    return Entity(id, name)
+    return when (type) {
+      EntityType.EASY -> Entity.Easy(id, name)
+      EntityType.MEDIUM -> Entity.Medium(id, name)
+      EntityType.HARD -> Entity.Hard(id, name, multiplier = 2f)
+      EntityType.HELP -> Entity.Help
+    }
   }
 
 }
 
-class Entity constructor(val id: String, val name: String) {
-  override fun toString(): String {
-    return "id:$id name:$name"
+sealed class Entity() {
+  object Help {
+    val name = "Help"
   }
+  data class Easy(val id: String, val: String): Entity()
+  data class Medium(val id: String, val: String): Entity()
+  data class Hard(val id: String, val: String, val multiplier: Float): Entity()
+
 
 }
 
