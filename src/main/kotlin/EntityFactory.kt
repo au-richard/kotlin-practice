@@ -27,20 +27,23 @@ object EntityFactory {
 }
 
 sealed class Entity() {
-  object Help {
+  object Help: Entity() {
     val name = "Help"
   }
-  data class Easy(val id: String, val: String): Entity()
-  data class Medium(val id: String, val: String): Entity()
-  data class Hard(val id: String, val: String, val multiplier: Float): Entity()
 
+  data class Easy(val id: String, val name: String): Entity()
+  data class Medium(val id: String, val name: String): Entity()
+  data class Hard(val id: String, val name: String, val multiplier: Float): Entity()
 
 }
 
-fun main () {
-  val entity = EntityFactory.create(EntityType.EASY)
-  println(entity)
-
-  val mediumEntity = EntityFactory.create(EntityType.MEDIUM)
-  println(mediumEntity)
+fun main() {
+  val entity: Entity = EntityFactory.create(EntityType.HELP)
+  val msg = when (entity) {
+    Entity.Help -> "help class"
+    is Entity.Easy -> "easy class"
+    is Entity.Hard -> "medium class"
+    is Entity.Medium -> "hard class"
+  }
+  println(msg)
 }
