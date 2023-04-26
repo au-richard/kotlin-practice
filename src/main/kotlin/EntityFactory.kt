@@ -1,15 +1,18 @@
-import java.util.UUID
+import java.util.*
 
 enum class EntityType {
-  EASY, MEDIUM, HARD
+  EASY, MEDIUM, HARD;
+
+  fun getFormattedName() = name.lowercase()
+    .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 }
 object EntityFactory {
   fun create(type: EntityType) : Entity {
     val id = UUID.randomUUID().toString()
     val name = when(type) {
-      EntityType.EASY -> "Easy"
-      EntityType.MEDIUM -> "Medium"
-      EntityType.HARD -> "Hard"
+      EntityType.EASY -> type.name
+      EntityType.MEDIUM -> type.getFormattedName()
+      EntityType.HARD -> "HARD"
 
     }
     return Entity(id, name)
