@@ -1,5 +1,19 @@
+import java.util.UUID
+
+enum class EntityType {
+  EASY, MEDIUM, HARD
+}
 object EntityFactory {
-  fun create() = Entity(id = "id", name = "name")
+  fun create(type: EntityType) : Entity {
+    val id = UUID.randomUUID().toString()
+    val name = when(type) {
+      EntityType.EASY -> "Easy"
+      EntityType.MEDIUM -> "Medium"
+      EntityType.HARD -> "Hard"
+
+    }
+    return Entity(id, name)
+  }
 
 }
 
@@ -11,6 +25,9 @@ class Entity constructor(val id: String, val name: String) {
 }
 
 fun main () {
-  val entity = EntityFactory.create()
+  val entity = EntityFactory.create(EntityType.EASY)
   println(entity)
+
+  val mediumEntity = EntityFactory.create(EntityType.MEDIUM)
+  println(mediumEntity)
 }
