@@ -27,17 +27,15 @@ val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c")
 //  map.put(4, "d")
 //  map.forEach { (key, value) -> println("$key -> $value") }
 
-//fun sayHello(greeting: String, vararg itemsToGreet: String) {
-//  itemsToGreet.forEach { itemToGreet ->
-//    println("$greeting $itemToGreet")
-//  }
-//}
+fun sayHello(greeting: String, vararg itemsToGreet: String) {
+  itemsToGreet.forEach { itemToGreet ->
+    println("$greeting $itemToGreet")
+  }
+}
 
-//fun greetPerson(greeting: String = "Hello", name: String = "Kotlin") = println("$greeting $name")
+fun greetPerson(greeting: String = "Hello", name: String = "Kotlin") = println("$greeting $name")
 
-//fun main() {
-////  val interestingThings = arrayOf("Kotlin", "Programming", "Comic Books")
-////  sayHello(itemsToGreet = interestingThings, greeting = "Hi")
-////  val person = Person("Mike", "Johnson")
-////  person.printInfo()
-//}
+fun main() {
+  val person = Person()
+  person.printInfo()
+}

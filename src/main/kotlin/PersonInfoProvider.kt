@@ -1,7 +1,7 @@
 interface PersonInfoProvider {
   val providerInfo: String
   fun printInfo(person: Person) {
-    println("basicInfoProvider")
+    println(providerInfo)
     person.printInfo()
   }
 }
@@ -14,20 +14,25 @@ open class BasicInfoProvider : PersonInfoProvider, SessionInfoProvider {
   override val providerInfo: String
     get() = "BasicInfoProvider"
 
+  open val sessionIdPrefix = "Session"
+
   override fun printInfo(person: Person) {
     super.printInfo(person)
     println("additional print statement")
   }
 
   override fun getSessionId(): String {
-    return "Session"
+    return sessionIdPrefix
   }
 }
 
 fun main() {
   val provider = FancyInfoProvider()
+  provider.sessionIdPrefix
+
   provider.printInfo(Person())
   provider.getSessionId()
+
   checkTypes(provider)
 }
 

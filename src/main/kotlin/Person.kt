@@ -6,12 +6,12 @@ class Person(val firstName: String = "Peter", val lastName: String = "Parker") {
       println("the new nickname is $value")
     }
     get() {
-      println("the return value is $field")
+      println("the returned value is $field")
       return field
     }
   fun printInfo() {
     val nicknameToPrint = nickname ?: "no nickname"
-    println("$firstName ($nickname) $lastName")
+    println("$firstName ($nicknameToPrint) $lastName")
   }
 }
 
