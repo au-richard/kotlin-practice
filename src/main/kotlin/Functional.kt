@@ -12,7 +12,11 @@ fun main() {
 //    .take(n = 3)
 //    .takeLast(n = 3)
     .associate { it to it.length }
-    .forEach {
-      println("${it.value}, ${it.key}")
-    }
+//    .forEach {
+//      println("${it.value}, ${it.key}")
+//    }
+
+//  How to rely on empty check instead of null check
+  val language = list.filterNotNull().findLast { it.startsWith(prefix = "Java") }.orEmpty()
+  println(language)
 }
