@@ -59,7 +59,7 @@ fun main() {
 
   if (entity2 is Entity.Medium) {
     entity2.printInfo()
-      entity2.info
+    entity2.info
 
   }
 }
