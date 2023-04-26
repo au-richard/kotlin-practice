@@ -31,19 +31,28 @@ sealed class Entity() {
     val name = "Help"
   }
 
-  data class Easy(val id: String, val name: String): Entity()
+  data class Easy(val id: String, val name: String): Entity() {
+    override fun equals(other: Any?): Boolean {
+      return super.equals(other)
+    }
+
+    override fun hashCode(): Int {
+      return super.hashCode()
+    }
+  }
+
   data class Medium(val id: String, val name: String): Entity()
-  data class Hard(val id: String, val name: String, val multiplier: Float): Entity()
+  data class Hard(val id: String, val name: String, val multiplier: Float) : Entity()
 
 }
 
 fun main() {
-  val entity: Entity = EntityFactory.create(EntityType.HELP)
-  val msg = when (entity) {
-    Entity.Help -> "help class"
-    is Entity.Easy -> "easy class"
-    is Entity.Hard -> "medium class"
-    is Entity.Medium -> "hard class"
+  val entity1 = Entity.Easy(id = "id", name = "name")
+  val entity2 = entity1.copy(name = "John")
+
+  if (entity1 == entity2) {
+    println("they are equal")
+  } else {
+    println("they are not equal")
   }
-  println(msg)
 }
