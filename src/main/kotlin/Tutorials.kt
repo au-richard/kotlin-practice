@@ -1,8 +1,8 @@
-
+import kotlin.math.pow
 
 fun main() {
-  var x = 20F
-  var y = 8
+  var sphereRadius = 5.5
+  var sphereVolume = 0.75 * Math.PI * sphereRadius.pow(3.0)
 
-  println("The result of x / y is ${x / y}")
+  println("The volume of the sphere is $sphereVolume")
 }
