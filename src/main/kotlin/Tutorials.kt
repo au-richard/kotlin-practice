@@ -14,4 +14,12 @@ fun main() {
   val list = mutableListOf(1, 2, 3)
   list.remove(2)
   println(list)
+  val string = "example string"
+  println("this is a string: ${string.uppercase()}")
+  val bool = true
+  val x = 9
+  val y = 3
+  val z = 9
+  val hardExpression = !(x != z ) && bool || z > (x + y) && (!bool || y < z)
+  println(hardExpression)
 }
