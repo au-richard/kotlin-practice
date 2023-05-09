@@ -44,6 +44,7 @@ import kotlin.math.pow
 //  if (userInput != null) {
 //    println(userInput.toInt() - 5)
 //  }
+
 //  println("Enter your age")
 //  val age = readlnOrNull()?.toInt()
 //  if (age != null) {
@@ -56,21 +57,11 @@ import kotlin.math.pow
 //    }
 //  }
 
-//  Arrays
+//  Practicing Arrays
 //  val myArray = arrayOf("Hello", "Guys", "What's up?")
 //  println(myArray[2])
 
-//  While Loops
-
-
-//  Practicing Arrays and Lists
-//  val numArr = arrayOf(1, 2, 3)
-//  val list = mutableListOf(1, 2, 3)
-//  list.remove(2)
-//  println(list)
-
-
-fun main() {
+//  Practicing While Loops
 //  val myArray = arrayOf("Hello", "Guys", "What's up?")
 //  val arrayLength = myArray.size
 //  var i = 0
@@ -87,13 +78,26 @@ fun main() {
 //      userInput--
 //    }
 //  }
+//  println("Please enter a number.")
+//  val num1 = readlnOrNull()?.toInt()
+//  println("Please enter an exponent.")
+//  val num2 = readlnOrNull()?.toInt()
+//  if (num1 != null && num2 != null) {
+//    val result = num1.toDouble().pow(num2)
+//    println("$num1 to the power of $num2 is ${result.toInt()}")
+//  }
 
-  println("Please enter a number.")
-  val num1 = readlnOrNull()?.toInt()
-  println("Please enter an exponent.")
-  val num2 = readlnOrNull()?.toInt()
-  if (num1 != null && num2 != null) {
-    val result = num1.toDouble().pow(num2)
-    println("$num1 to the power of $num2 is ${result.toInt()}")
-  }
+//  Practicing For Loops
+
+
+//  Practicing Arrays and Lists
+//  val numArr = arrayOf(1, 2, 3)
+//  val list = mutableListOf(1, 2, 3)
+//  list.remove(2)
+//  println(list)
+
+
+fun main() {
+
+
 }
