@@ -1,5 +1,5 @@
-//import java.util.*
-//import kotlin.math.pow
+import java.util.*
+import kotlin.math.pow
 
 // Practicing Arithmetic Operators
 //  val x = 7
@@ -40,6 +40,27 @@
 //  if (string.reversed() == string) println("$string is a palindrome") else println("$string is not a palindrome")
 
 //  Practicing Null Values and User Input
+//  val userInput = readLine()
+//  if (userInput != null) {
+//    println(userInput.toInt() - 5)
+//  }
+//  println("Enter your age")
+//  val age = readlnOrNull()?.toInt()
+//  if (age != null) {
+//    if (age in 18..65) {
+//      println("You are an adult")
+//    } else if (age > 65){
+//      println("You are really old.")
+//    } else {
+//      println("You are not an adult yet.")
+//    }
+//  }
+
+//  Arrays
+//  val myArray = arrayOf("Hello", "Guys", "What's up?")
+//  println(myArray[2])
+
+//  While Loops
 
 
 //  Practicing Arrays and Lists
@@ -47,20 +68,32 @@
 //  val list = mutableListOf(1, 2, 3)
 //  list.remove(2)
 //  println(list)
+
+
 fun main() {
-//  val userInput = readLine()
-//  if (userInput != null) {
-//    println(userInput.toInt() - 5)
+//  val myArray = arrayOf("Hello", "Guys", "What's up?")
+//  val arrayLength = myArray.size
+//  var i = 0
+//  while (i < arrayLength) {
+//    println(myArray[i])
+//    i++
 //  }
-  println("Enter your age")
-  val age = readlnOrNull()
-  if (age != null) {
-    if (age.toInt() in 18..65) {
-      println("You are an adult")
-    } else if (age.toInt() > 65){
-      println("You are really old.")
-    } else {
-      println("You are not an adult yet.")
-    }
+//  println("Please enter a number")
+//  var userInput = readlnOrNull()?.toInt()
+//  if (userInput != null) {
+//    println("Counting down from $userInput to 0:")
+//    while (userInput >= 0) {
+//      println(userInput)
+//      userInput--
+//    }
+//  }
+
+  println("Please enter a number.")
+  val num1 = readlnOrNull()?.toInt()
+  println("Please enter an exponent.")
+  val num2 = readlnOrNull()?.toInt()
+  if (num1 != null && num2 != null) {
+    val result = num1.toDouble().pow(num2)
+    println("$num1 to the power of $num2 is ${result.toInt()}")
   }
 }
