@@ -44,7 +44,6 @@ import kotlin.math.pow
 //  if (userInput != null) {
 //    println(userInput.toInt() - 5)
 //  }
-
 //  println("Enter your age")
 //  val age = readlnOrNull()?.toInt()
 //  if (age != null) {
@@ -98,6 +97,11 @@ import kotlin.math.pow
 
 
 fun main() {
-
+//  val myArray = arrayOf(1, 2, 3)
+//  Range descending, every 2
+//  for (i in 10 downTo 5 step 2) {
+//    println(i)
+//  }
+  val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
 
 }
