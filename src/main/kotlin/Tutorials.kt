@@ -107,15 +107,19 @@ fun main() {
 //  }
 
 //  Finding max value
+//  val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
+//  var max = myArray[0]
+//  for (item in myArray) {
+//    if (item > max) {
+//      max = item
+//    }
+//  }
+//  println(max)
+
   val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
-  var max = myArray[0]
-  for (item in myArray) {
-    if (item > max) {
-      max = item
-    }
+  var sum = 0
+  for (i in myArray) {
+    sum += i
   }
-  println(max)
-
-
-
+  println("The sum of the array is $sum")
 }
