@@ -68,6 +68,7 @@ import kotlin.math.pow
 //    println(myArray[i])
 //    i++
 //  }
+
 //  println("Please enter a number")
 //  var userInput = readlnOrNull()?.toInt()
 //  if (userInput != null) {
@@ -77,6 +78,7 @@ import kotlin.math.pow
 //      userInput--
 //    }
 //  }
+
 //  println("Please enter a number.")
 //  val num1 = readlnOrNull()?.toInt()
 //  println("Please enter an exponent.")
@@ -85,6 +87,7 @@ import kotlin.math.pow
 //    val result = num1.toDouble().pow(num2)
 //    println("$num1 to the power of $num2 is ${result.toInt()}")
 //  }
+
 
 //  Practicing For Loops
 
@@ -102,6 +105,17 @@ fun main() {
 //  for (i in 10 downTo 5 step 2) {
 //    println(i)
 //  }
+
+//  Finding max value
   val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
+  var max = myArray[0]
+  for (item in myArray) {
+    if (item > max) {
+      max = item
+    }
+  }
+  println(max)
+
+
 
 }
