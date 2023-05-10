@@ -116,10 +116,20 @@ fun main() {
 //  }
 //  println(max)
 
-  val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
-  var sum = 0
-  for (i in myArray) {
-    sum += i
+//  val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
+//  var sum = 0
+//  for (i in myArray) {
+//    sum += i
+//  }
+//  println("The sum of the array is $sum")
+
+  println("Enter 5 numbers:")
+  var avg = 0.0
+  for (i in 1..5) {
+    var input = readln()?.toInt()
+    if (input != null) {
+      avg += input / 5.0
+    }
   }
-  println("The sum of the array is $sum")
+  println("The average value is $avg")
 }
