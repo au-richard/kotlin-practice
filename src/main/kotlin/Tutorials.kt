@@ -129,10 +129,6 @@ import kotlin.math.pow
 
 
 //  Practicing Lists
-
-
-
-fun main() {
 //  val list = mutableListOf<Int>()
 //  for (i in 1..5) {
 //    val x = readlnOrNull()?.toInt()
@@ -142,6 +138,21 @@ fun main() {
 //  }
 //  println(list.reversed())
 
-  val list = mutableListOf<Int>()
 
+
+fun main() {
+  println("Enter a number n > 1")
+  val userInput = readlnOrNull()?.toInt()
+  val list = mutableListOf<Int>()
+  var num1 = 0
+  var num2 = 1
+  if (userInput != null && userInput > 1) {
+    for (i in 1..userInput) {
+      list.add(num1)
+      val sum = num1 + num2
+      num1 = num2
+      num2 = sum
+    }
+  }
+  println(list)
 }
