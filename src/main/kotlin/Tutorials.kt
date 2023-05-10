@@ -35,6 +35,7 @@ import kotlin.math.pow
 //  } else {
 //      println("x is equal to y")
 //  }
+
 //  println("the value of z is $z")
 //  val string = "callers"
 //  if (string.reversed() == string) println("$string is a palindrome") else println("$string is not a palindrome")
@@ -44,6 +45,7 @@ import kotlin.math.pow
 //  if (userInput != null) {
 //    println(userInput.toInt() - 5)
 //  }
+
 //  println("Enter your age")
 //  val age = readlnOrNull()?.toInt()
 //  if (age != null) {
@@ -56,9 +58,11 @@ import kotlin.math.pow
 //    }
 //  }
 
+
 //  Practicing Arrays
 //  val myArray = arrayOf("Hello", "Guys", "What's up?")
 //  println(myArray[2])
+
 
 //  Practicing While Loops
 //  val myArray = arrayOf("Hello", "Guys", "What's up?")
@@ -90,16 +94,6 @@ import kotlin.math.pow
 
 
 //  Practicing For Loops
-
-
-//  Practicing Arrays and Lists
-//  val numArr = arrayOf(1, 2, 3)
-//  val list = mutableListOf(1, 2, 3)
-//  list.remove(2)
-//  println(list)
-
-
-fun main() {
 //  val myArray = arrayOf(1, 2, 3)
 //  Range descending, every 2
 //  for (i in 10 downTo 5 step 2) {
@@ -123,13 +117,28 @@ fun main() {
 //  }
 //  println("The sum of the array is $sum")
 
-  println("Enter 5 numbers:")
-  var avg = 0.0
-  for (i in 1..5) {
-    var input = readln()?.toInt()
-    if (input != null) {
-      avg += input / 5.0
+//  println("Enter 5 numbers:")
+//  var avg = 0.0
+//  for (i in 1..5) {
+//    var input = readln()?.toInt()
+//    if (input != null) {
+//      avg += input / 5.0
+//    }
+//  }
+//  println("The average value is $avg")
+
+
+//  Practicing Lists
+
+
+
+fun main() {
+  val list = mutableListOf<Int>()
+  for (i in 1..10) {
+    val x = readlnOrNull()?.toInt()
+    if (x != null) {
+      list.add(x)
     }
   }
-  println("The average value is $avg")
+  println(list)
 }
