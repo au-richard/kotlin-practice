@@ -156,8 +156,6 @@ import kotlin.math.pow
 
 
 //  Practicing When
-
-fun main() {
 //  println("Enter your age")
 //  val age = readLine()?.toInt()
 //  when(age) {
@@ -169,17 +167,46 @@ fun main() {
 //    else -> println("You're really old")
 //  }
 
-  println("Where are you from?")
-  when (readlnOrNull()) {
-    "India" -> println("Namaste")
-    "USA" -> println("Hello")
-    "France" -> println("Bonjour")
-    "Germany" -> println("Hallo")
-    "Russia" -> println("Privet")
-    "China" -> println("你好")
-    "Japan" -> println("こんにちは")
-    else -> println("I don't know that")
+//  println("Where are you from?")
+//  when (readlnOrNull()) {
+//    "India" -> println("Namaste")
+//    "USA" -> println("Hello")
+//    "France" -> println("Bonjour")
+//    "Germany" -> println("Hallo")
+//    "Russia" -> println("Privet")
+//    "China" -> println("你好")
+//    "Japan" -> println("こんにちは")
+//    else -> println("I don't know that")
+//  }
+
+
+//  Practicing Functions and Parameters
+val userInput = readlnOrNull()?.toInt()
+fun main() {
+//  printPow(12, 8)
+  println("Enter a number")
+  if (userInput != null) {
+    sumNum(userInput)
   }
+}
 
+fun printPow(base: Int, exponent: Int) {
+  var result = 1
+  for (i in 1..exponent) {
+    result *= base
+  }
+  println("$base to the power of $exponent is $result")
+}
+fun printThreeLines() {
+  println("First")
+  println("Second")
+  println("Third")
+}
 
+fun sumNum(num: Int) {
+  var result = 0
+  for (i in 1..userInput!!) {
+    result += i
+  }
+  println("The sum of the values from 1 to $userInput is $result")
 }
