@@ -181,32 +181,57 @@ import kotlin.math.pow
 
 
 //  Practicing Functions and Parameters
+//fun printPow(base: Int, exponent: Int) {
+//  var result = 1
+//  for (i in 1..exponent) {
+//    result *= base
+//  }
+//  println("$base to the power of $exponent is $result")
+//}
+
+//fun sumNum(num: Int) {
+//  var result = 0
+//  for (i in 1..num) {
+//    result += i
+//  }
+//  println("The sum of the values from 1 to $num is $result")
+//}
+
+//  printPow(12, 8)
+//  sumNum(8)
+
+
+//  Practicing Return in Functions
+//fun printPow(base: Int, exponent: Int): Int {
+//  var result = 1
+//  for (i in 1..exponent) {
+//    result *= base
+//  }
+//  return result
+//}
+
+//fun printFirstItem(list: List<Int>) = println(list[0])
+
+//fun multiply(a: Int, b: Int) = a * b
+
+//  val pow = printPow(3, 5)
+//  println("3 to the power of 5 is $pow")
+//  println(multiply(3, 5))
+
 val userInput = readlnOrNull()?.toInt()
 fun main() {
-//  printPow(12, 8)
-  println("Enter a number")
-  if (userInput != null) {
-    sumNum(userInput)
+}
+
+fun findIndex(numArr: List<Int>) {
+  var index = 0
+  for (i in numArr.indices) {
+    if (numArr[i] == userInput) {
+      index = i
+      return println("The index of $userInput in the list in $index")
+    } else {
+      println("$userInput not found: -1")
+    }
   }
 }
 
-fun printPow(base: Int, exponent: Int) {
-  var result = 1
-  for (i in 1..exponent) {
-    result *= base
-  }
-  println("$base to the power of $exponent is $result")
-}
-fun printThreeLines() {
-  println("First")
-  println("Second")
-  println("Third")
-}
 
-fun sumNum(num: Int) {
-  var result = 0
-  for (i in 1..userInput!!) {
-    result += i
-  }
-  println("The sum of the values from 1 to $userInput is $result")
-}
