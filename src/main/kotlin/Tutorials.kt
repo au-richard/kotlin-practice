@@ -138,22 +138,34 @@ import kotlin.math.pow
 //  }
 //  println(list.reversed())
 
+//  Fibonacci Sequence
+//  println("Enter a number n > 1")
+//  val userInput = readlnOrNull()?.toInt()
+//  val list = mutableListOf<Int>()
+//  var num1 = 0
+//  var num2 = 1
+//  if (userInput != null && userInput > 1) {
+//    for (i in 1..userInput) {
+//      list.add(num1)
+//      val sum = num1 + num2
+//      num1 = num2
+//      num2 = sum
+//    }
+//  }
+//  println(list)
 
+
+//  Practicing When
 
 fun main() {
-  println("Enter a number n > 1")
-  val userInput = readlnOrNull()?.toInt()
-  val list = mutableListOf<Int>()
-  var num1 = 0
-  var num2 = 1
-  if (userInput != null && userInput > 1) {
-    for (i in 1..userInput) {
-      list.add(num1)
-      val sum = num1 + num2
-      num1 = num2
-      num2 = sum
-    }
+  println("Enter your age")
+  val age = readLine()?.toInt()
+  when(age) {
+    in 0..5 -> println("You're a young kid")
+    in 6..17 -> println("You're a teenager")
+    18 -> println("Finally, you're 18!")
+    19, 20 -> println("You're young adult")
+    in 21..65 -> println("You're an adult")
+    else -> println("You're really old")
   }
-  println(list)
-
 }
