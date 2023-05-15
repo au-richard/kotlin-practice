@@ -246,6 +246,20 @@ import kotlin.math.pow
 //  return max
 //}
 
+//  val sum = alternatingSum(3, 4, 5, 2, 1, 2, 3)
+//  println("The alternating sum is $sum")
+//fun alternatingSum(vararg numArr: Int): Int {
+//  var result = 0
+//  for (i in numArr.indices) {
+//    if (numArr[i] % 2 == 0) {
+//      result -= numArr[i]
+//    } else {
+//      result += numArr[i]
+//    }
+//  }
+//  return result
+//}
+
 
 //  Practicing Function Parameter Default Named Value
 //  searchFor("How to become a good programmer")
@@ -254,22 +268,30 @@ import kotlin.math.pow
 //  println("Searching for $search on $searchEngine")
 //  }
 
-fun main() {
-  val sum = alternatingSum(3, 4, 5, 2, 1, 2, 3)
-  println("The alternating sum is $sum")
-}
 
-fun alternatingSum(vararg numArr: Int): Int {
-  var result = 0
-  for (i in numArr.indices) {
-    if (numArr[i] % 2 == 0) {
-      result -= numArr[i]
+//  Practicing Extension Functions
+
+
+
+fun main() {
+  println("Please enter a number")
+  val input = readlnOrNull()?.toInt()
+  if (input != null) {
+    if (input.isPrime()) {
+      println("$input is a prime number")
     } else {
-      result += numArr[i]
+      println("$input is not a prime number")
     }
   }
-  return result
 }
 
+fun Int.isPrime(): Boolean {
+  for (i in 2 until this - 1) {
+    if (this % i == 0) {
+      return false
+    }
+  }
+  return true
+}
 
 
