@@ -232,11 +232,11 @@ import kotlin.math.pow
 //}
 
 
-//Practicing VarArg
+//  Practicing VarArg
 //  val array = intArrayOf(10, 20, 25)
 //  val max = getMax(1, 2, 7, 5, 3, *array, 4, 6, 1, 10, 15, 4)
 //  println("The maximum is $max")
-//fun getMax(vararg numbers: Int): Int {
+//  fun getMax(vararg numbers: Int): Int {
 //  var max = numbers[0]
 //  for (number in numbers) {
 //    if (number > max) {
@@ -245,13 +245,31 @@ import kotlin.math.pow
 //  }
 //  return max
 //}
+
+
+//  Practicing Function Parameter Default Named Value
+//  searchFor("How to become a good programmer")
+//  searchFor("How to program", "Bing")
+//  fun searchFor(search: String, searchEngine: String = "Google") {
+//  println("Searching for $search on $searchEngine")
+//  }
+
 fun main() {
-  searchFor("How to become a good programmer")
-  searchFor("How to program", "Bing")
+  val sum = alternatingSum(3, 4, 5, 2, 1, 2, 3)
+  println("The alternating sum is $sum")
 }
 
-fun searchFor(search: String, searchEngine: String = "Google") {
-  println("Searching for $search on $searchEngine")
+fun alternatingSum(vararg numArr: Int): Int {
+  var result = 0
+  for (i in numArr.indices) {
+    if (numArr[i] % 2 == 0) {
+      result -= numArr[i]
+    } else {
+      result += numArr[i]
+    }
+  }
+  return result
 }
+
 
 
