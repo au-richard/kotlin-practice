@@ -233,25 +233,25 @@ import kotlin.math.pow
 
 
 //Practicing VarArg
-fun main() {
 //  val array = intArrayOf(10, 20, 25)
 //  val max = getMax(1, 2, 7, 5, 3, *array, 4, 6, 1, 10, 15, 4)
 //  println("The maximum is $max")
-
+//fun getMax(vararg numbers: Int): Int {
+//  var max = numbers[0]
+//  for (number in numbers) {
+//    if (number > max) {
+//      max = number
+//    }
+//  }
+//  return max
+//}
+fun main() {
   searchFor("How to become a good programmer")
+  searchFor("How to program", "Bing")
 }
 
 fun searchFor(search: String, searchEngine: String = "Google") {
   println("Searching for $search on $searchEngine")
-}
-fun getMax(vararg numbers: Int): Int {
-  var max = numbers[0]
-  for (number in numbers) {
-    if (number > max) {
-      max = number
-    }
-  }
-  return max
 }
 
 
