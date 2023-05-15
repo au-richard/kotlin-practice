@@ -218,20 +218,40 @@ import kotlin.math.pow
 //  println("3 to the power of 5 is $pow")
 //  println(multiply(3, 5))
 
-val userInput = readlnOrNull()?.toInt()
+//val userInput = readlnOrNull()?.toInt()
+//fun findIndex(numArr: List<Int>) {
+//  var index = 0
+//  for (i in numArr.indices) {
+//    if (numArr[i] == userInput) {
+//      index = i
+//      return println("The index of $userInput in the list is $index")
+//    } else {
+//      println("$userInput not found: -1")
+//    }
+//  }
+//}
+
+
+//Practicing VarArg
 fun main() {
+//  val array = intArrayOf(10, 20, 25)
+//  val max = getMax(1, 2, 7, 5, 3, *array, 4, 6, 1, 10, 15, 4)
+//  println("The maximum is $max")
+
+  searchFor("How to become a good programmer")
 }
 
-fun findIndex(numArr: List<Int>) {
-  var index = 0
-  for (i in numArr.indices) {
-    if (numArr[i] == userInput) {
-      index = i
-      return println("The index of $userInput in the list in $index")
-    } else {
-      println("$userInput not found: -1")
+fun searchFor(search: String, searchEngine: String = "Google") {
+  println("Searching for $search on $searchEngine")
+}
+fun getMax(vararg numbers: Int): Int {
+  var max = numbers[0]
+  for (number in numbers) {
+    if (number > max) {
+      max = number
     }
   }
+  return max
 }
 
 
