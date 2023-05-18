@@ -1,6 +1,3 @@
-import java.util.*
-import kotlin.math.pow
-
 // Practicing Arithmetic Operators
 //  val x = 7
 //  val y = 7
@@ -280,9 +277,11 @@ fun main() {
     if (input.isPrime()) {
       println("$input is a prime number")
     } else {
-      println("$input is not a prime number")
+      println("$input is not a prime numberj")
     }
   }
+//  val num = arrayOf(1, 2, 3, 4, 5, 6)
+//  println("The product of ${num.joinToString(", ")} is ${quotient(num)}")
 }
 
 fun Int.isPrime(): Boolean {
@@ -293,5 +292,13 @@ fun Int.isPrime(): Boolean {
   }
   return true
 }
+
+//fun quotient(numArr: Array<Int>): Int {
+//  var result = 1
+//  for (i in numArr) {
+//    result *= i
+//  }
+//  return result
+//}
 
 
