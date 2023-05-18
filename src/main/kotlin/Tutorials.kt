@@ -267,10 +267,6 @@
 
 
 //  Practicing Extension Functions
-
-
-
-fun main() {
 //  println("Please enter a number")
 //  val input = readlnOrNull()?.toInt()
 //  if (input != null) {
@@ -280,10 +276,6 @@ fun main() {
 //      println("$input is not a prime numberj")
 //    }
 //  }
-  val num = arrayOf(1, 2, 3, 4, 5, 6)
-  println("The product of ${num.joinToString(", ")} is ${quotient(num)}")
-}
-
 //fun Int.isPrime(): Boolean {
 //  for (i in 2 until this - 1) {
 //    if (this % i == 0) {
@@ -293,12 +285,21 @@ fun main() {
 //  return true
 //}
 
-fun quotient(numArr: Array<Int>): Int {
-  var result = 1
-  for (i in numArr) {
-    result *= i
-  }
-  return result
+//  val num = arrayOf(1, 2, 3, 4, 5, 6)
+//  println("The product of ${num.joinToString(", ")} is ${quotient(num)}")
+//fun quotient(numArr: Array<Int>): Int {
+//  var result = 1
+//  for (i in numArr) {
+//    result *= i
+//  }
+//  return result
 }
+
+
+
+fun main() {
+}
+
+
 
 
